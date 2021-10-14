@@ -1,0 +1,11 @@
+{
+	"title": "Readme Maker 1.6",
+	"email": "don'task@gmail.com",
+	"user": "azuryte5",
+	"description": "I want a project that will search for all the video games in the world",
+	"license": "None",
+	"dependency": "npm i",
+	"test": "npm test",
+	"moreInfo": "Don't forget about gameboy games",
+	"contribute": "Ask any questions about use "
+}

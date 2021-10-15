@@ -12,7 +12,7 @@
 ## Links
 * The URL of the GitHub repository: https://github.com/azuryte5/Professional-readme-maker
 
-* The link to the Screencastify video: https://watch.screencastify.com/v/pwTRoHAe1Q4SXvMz2Wob
+* The link to the Screencastify video: https://watch.screencastify.com/v/S0vWDyVWsjsh8siVCmOC
 ---
 ## Usage
 

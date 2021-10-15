@@ -1,10 +1,12 @@
 const { Console } = require('console');
 const fs = require('fs');
 const inquirer = require('inquirer');
-//const generatePage = require('./src/page-template'); I need a readme
+const generatePage = require('./page-template');
 
-inquirer.prompt( [
-{
+const readmeProject = () => {
+return inquirer
+    .prompt([
+    {
     type:"input",
     name:"title",
     message: "What is the project's title?"    
@@ -33,7 +35,7 @@ inquirer.prompt( [
 },
 {
     type:"input",
-    name:"dependency",
+    name:"install",
     message: "What dependencies need to be installed first?", 
     default:'npm i'   
 },
@@ -46,24 +48,36 @@ inquirer.prompt( [
 {
     type:"input",
     name:"moreInfo",
-    message: "What else does the user need to know about this project?"    
+    message: "What else does the user need to know about this project and proper usage?"    
 },
 {
     type:"input",
     name:"contribute",
-    message: "What does the user need to know about contributing to the repo?"    
+    message: "What guidelines should users want to send contributions to the project?"    
 },
+])
+// .then(readmeData => {
+//       //Filename is WHAT IS IT GOing to be called.
+//       var filename = "answers.json"
+//       fs.writeFile(answers.json, readmeData, function(err) {
+//         if (err) {
+//           return console.log(err);
+//         }
+//         console.log("Success!");
+//       })
+//     })
+}
 
-]).then(function(data) {
-      //Filename is WHAT IS IT GOing to be called.
-      var filename = "answers.json"
-      fs.writeFile(filename, JSON.stringify(data, null, '\t'), function(err) {
-        if (err) {
-          return console.log(err);
-        }
-        console.log("Success!");
-      })
-    })
+readmeProject()
+    .then(data => {
+        //Filename is WHAT IS IT GOing to be called.
+        const pageMD = generatePage(data);
+        fs.writeFile('./readmeSample.md', pageMD, err => {
+          if (err) throw new Error (err);
+        
+          console.log("Success!");
+        });
+      });
 // This was too store in a readme
 // function(data) {
 //     console.log(JSON.stringify(data))

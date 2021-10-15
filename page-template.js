@@ -1,4 +1,7 @@
-# Title: {title}
+module.exports = readmeData => {
+  console.log(readmeData);
+
+  return `# Title: {title}
 
 
   ## Table of Contents
@@ -53,4 +56,9 @@
   
   >"That might be the most important thing to understand about Humans. It's the unknown that defines our existence. We are constantly searching, not just for answers to our questions, but for new questions." - Capt. Benjamin Sisko 
   ---
-        
+        `;
+    };
+
+    // module.exports = generatePage
+
+    // Exports means, Hey This will get scoped up and read by another entity

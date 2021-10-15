@@ -3,6 +3,7 @@ module.exports = readmeData => {
 
   return `# Title: ${readmeData.title}
 
+  [![License: ${readmeData.license}](https://img.shields.io/badge/License-${readmeData.license}-blue.svg)](https://opensource.org/licenses/${readmeData.license})
 
   ## Table of Contents
   Jump to Section
@@ -39,8 +40,10 @@ module.exports = readmeData => {
   
   ---
   ## Contributing
-  We welcome all who use this application to share their thoughts and experiences. Such as following these preceding **guidelines**.
-  
+  We welcome all who use this application to share their thoughts and experiences. 
+   Here are some other **guidelines**.
+  - Have a look at [source code](https://www.github.com/${readmeData.user}/${readmeData.title}/pulls) changes
+  - Feel free to checkout the [issues page](https://www.github.com/${readmeData.user}/${readmeData.title}/issues) for this project
   - ${readmeData.contribute}
   
   ---

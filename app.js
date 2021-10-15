@@ -30,8 +30,13 @@ return inquirer
     type:"list",
     name:"license",
     message: "What kind of license would you like?",
-    choices:['MIT', 'Apache 2.0', 'GPL 3.0', 'BSD 3', 'None'],
-    default: 'none'    
+    choices:['MIT', 'Zlib', 'ODbL', 'ISC', 'None'],
+    default: 'None',
+    filter: licenseInput => {
+        if(licenseInput === 'None'){
+            return 'WTFPL'
+        } else {return licenseInput}
+    }
 },
 {
     type:"input",

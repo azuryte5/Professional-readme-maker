@@ -1,7 +1,7 @@
 module.exports = readmeData => {
   console.log(readmeData);
 
-  return `# Title: {title}
+  return `# Title: ${readmeData.title}
 
 
   ## Table of Contents
@@ -16,43 +16,43 @@ module.exports = readmeData => {
   
   ---
   ## Description
-  * {description}
+  * ${readmeData.description}
   
   ---
   ## Installation
   
   * Clone Repository and run application
 
-   'install'
+   ${readmeData.install}
 
   ---
   ## Usage
   Here are some other details about using this product
 
-  'moreInfo'
+  ${readmeData.moreInfo}
 
   ---
   ## License
   Copyright &copy {insert year} {Project Name}
   
-  This license permits developers to use code within terms and conditions of {license}
+  This license permits developers to use code within terms and conditions of ${readmeData.license}
   
   ---
   ## Contributing
   We welcome all who use this application to share their thoughts and experiences. Such as following these preceding **guidelines**.
   
-  - {contribute}
+  - ${readmeData.contribute}
   
   ---
   ## Tests
   Here is how to run tests
 
-  'test'
+  ${readmeData.test}
 
   ---
   ## Questions
-  Feel **free** to reach out to <{email}> for further information. 
-  Check out [Github profile](https://www.github/{user})
+  Feel **free** to reach out to <${readmeData.email}> for further information. 
+  Check out [Github profile](https://www.github/${readmeData.user})
   
   >"That might be the most important thing to understand about Humans. It's the unknown that defines our existence. We are constantly searching, not just for answers to our questions, but for new questions." - Capt. Benjamin Sisko 
   ---

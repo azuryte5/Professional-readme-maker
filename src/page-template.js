@@ -1,3 +1,5 @@
+var year= new Date().getFullYear()
+
 module.exports = readmeData => {
   console.log(readmeData);
 
@@ -34,7 +36,7 @@ module.exports = readmeData => {
 
   ---
   ## License
-  Copyright &copy {insert year} {Project Name}
+  Copyright &copy; ${year}  ${readmeData.title}
   
   This license permits developers to use code within terms and conditions of ${readmeData.license}
   

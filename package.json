@@ -1,0 +1,23 @@
+{
+  "name": "professional-readme-maker",
+  "version": "1.0.0",
+  "description": "make readme",
+  "main": "app.js",
+  "dependencies": {
+    "inquirer": "^8.2.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/azuryte5/Professional-readme-maker.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/azuryte5/Professional-readme-maker/issues"
+  },
+  "homepage": "https://github.com/azuryte5/Professional-readme-maker#readme"
+}

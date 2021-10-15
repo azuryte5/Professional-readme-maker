@@ -1,7 +1,7 @@
 const { Console } = require('console');
 const fs = require('fs');
 const inquirer = require('inquirer');
-const generatePage = require('./page-template');
+const generatePage = require('./src/page-template');
 
 const readmeProject = () => {
 return inquirer
@@ -61,21 +61,11 @@ return inquirer
     message: "What guidelines should users want to send contributions to the project?"    
 },
 ])
-// .then(readmeData => {
-//       //Filename is WHAT IS IT GOing to be called.
-//       var filename = "answers.json"
-//       fs.writeFile(answers.json, readmeData, function(err) {
-//         if (err) {
-//           return console.log(err);
-//         }
-//         console.log("Success!");
-//       })
-//     })
+
 }
 
 readmeProject()
     .then(data => {
-        //Filename is WHAT IS IT GOing to be called.
         const pageMD = generatePage(data);
         fs.writeFile('./readmeSample.md', pageMD, err => {
           if (err) throw new Error (err);
@@ -83,14 +73,3 @@ readmeProject()
           console.log("Success!");
         });
       });
-// This was too store in a readme
-// function(data) {
-//     console.log(JSON.stringify(data))
-//     //saw this from 9.2 activitiy
-//     var title = JSON.stringify(data, null, '\t')
-//     fs.writeFile('readmeSample.md', title, (err) => {
-//     if (err) {console.error(err)
-//         return
-//     }
-    
-//     })})

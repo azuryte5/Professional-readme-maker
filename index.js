@@ -1,6 +1,7 @@
 const { Console } = require('console');
 const fs = require('fs');
 const inquirer = require('inquirer');
+const { title } = require('process');
 const generatePage = require('./src/page-template');
 
 const readmeProject = () => {
@@ -9,7 +10,14 @@ return inquirer
     {
     type:"input",
     name:"title",
-    message: "What is the project's title?"    
+    message: "What is the project's title? (Required)",
+    validate: titleInput => {
+        if (titleInput) {
+            return true;
+        } else {console.log("Title is needed to proceed!")
+    return false;
+        }        
+    }    
 },
 {
     type:"input",
@@ -24,7 +32,14 @@ return inquirer
 {
     type:"input",
     name:"description",
-    message: "Provide a quick description of the project.."    
+    message: "Provide a quick description of the project. (Required)",
+    validate: descriptionInput => {
+        if (descriptionInput) {
+            return true;
+        } else {console.log("You need to add something to your readme!")
+    return false;
+        }        
+    }     
 },
 {
     type:"list",
@@ -60,9 +75,8 @@ return inquirer
     name:"contribute",
     message: "What guidelines should users want to send contributions to the project?"    
 },
-])
-
-}
+]);
+};
 
 readmeProject()
     .then(data => {
